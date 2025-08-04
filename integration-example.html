@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Widget Integration Example</title>
+    <!-- Include the weather widget CSS -->
+    <link rel="stylesheet" href="weather-widget.css">
+    
+    <!-- Page styles (optional) -->
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #ffcdd2, #f8bbd0, #e1bee7, #d1c4e9);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            color: #5d4037;
+        }
+        
+        @keyframes gradientBG {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .content {
+            background: rgba(255, 255, 255, 0.7);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+        }
+        
+        h1 {
+            text-align: center;
+            color: #4e342e;
+            margin-bottom: 30px;
+        }
+        
+        p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        
+        .widget-container {
+            /* This is where the weather widget will be placed */
+            margin-top: 30px;
+        }
+        
+        .code-example {
+            background: #2d2d2d;
+            color: #f8f8f2;
+            border-radius: 10px;
+            padding: 20px;
+            font-family: 'Courier New', monospace;
+            overflow-x: auto;
+            margin: 20px 0;
+        }
+        
+        .code-example code {
+            display: block;
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Weather Widget Integration Example</h1>
+        
+        <div class="content">
+            <p>This page demonstrates how to easily integrate the weather widget into any webpage.</p>
+            
+            <p>The weather widget is a self-contained component that can be added to any website with just a few lines of code.</p>
+            
+            <h2>How to integrate:</h2>
+            
+            <p>1. Include the CSS and JavaScript files:</p>
+            
+            <div class="code-example">
+                <code>&lt;!-- Include the weather widget CSS --&gt;
+&lt;link rel="stylesheet" href="weather-widget.css"&gt;
+
+&lt;!-- Include the weather widget JavaScript --&gt;
+&lt;script src="weather-widget.js"&gt;&lt;/script&gt;</code>
+            </div>
+            
+            <p>2. Create a container element for the widget:</p>
+            
+            <div class="code-example">
+                <code>&lt;div id="weather-widget-container"&gt;&lt;/div&gt;</code>
+            </div>
+            
+            <p>3. Initialize the widget with JavaScript:</p>
+            
+            <div class="code-example">
+                <code>&lt;script&gt;
+    // Initialize the weather widget
+    document.addEventListener('DOMContentLoaded', function() {
+        const weatherWidget = new WeatherWidget('weather-widget-container', {
+            apiKey: 'YOUR_API_KEY', // Optional: your own API key
+            defaultCity: 'New York', // Optional: default city
+            units: 'metric' // Optional: 'metric' or 'imperial'
+        });
+    });
+&lt;/script&gt;</code>
+            </div>
+        </div>
+        
+        <!-- This is where the weather widget will be displayed -->
+        <div id="weather-widget-container" class="widget-container"></div>
+    </div>
+    
+    <!-- Include the weather widget JavaScript -->
+    <script src="weather-widget.js"></script>
+    
+    <!-- Initialize the weather widget -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const weatherWidget = new WeatherWidget('weather-widget-container', {
+                // You can customize these options:
+                // apiKey: 'YOUR_API_KEY',
+                // defaultCity: 'Paris',
+                // units: 'imperial',
+                // enableGeolocation: false
+            });
+        });
+    </script>
+</body>
+</html>

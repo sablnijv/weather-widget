@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cozy Weather App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Decorative elements -->
+    <div class="decoration circle" style="width: 300px; height: 300px; top: 10%; left: 5%;"></div>
+    <div class="decoration circle" style="width: 200px; height: 200px; bottom: 10%; right: 10%;"></div>
+    <div class="decoration square" style="width: 150px; height: 150px; top: 20%; right: 15%;"></div>
+    <div class="decoration square" style="width: 100px; height: 100px; bottom: 20%; left: 15%;"></div>
+    
+    <div class="container">
+        <div class="header">
+            <h1>Cozy Weather</h1>
+            <p>Warm and soft weather forecasts</p>
+        </div>
+        
+        <div class="search-container">
+            <input type="text" id="city-input" placeholder="Enter city name...">
+            <button id="search-btn">Search</button>
+        </div>
+        
+        <div class="weather-container">
+            <div class="weather-card">
+                <div class="city-name">
+                    <h2 id="city">City Name</h2>
+                </div>
+                
+                <div class="weather-main">
+                    <div class="temperature">
+                        <span id="temp">--</span>
+                        <span class="temp-unit">°C</span>
+                    </div>
+                    <div class="weather-icon">
+                        <img id="weather-icon" src="" alt="Weather icon">
+                    </div>
+                </div>
+                
+                <div class="weather-details">
+                    <div class="description" id="description">--</div>
+                    <div class="details-grid">
+                        <div class="detail">
+                            <span class="label">Feels like</span>
+                            <span class="value" id="feels-like">--°</span>
+                        </div>
+                        <div class="detail">
+                            <span class="label">Humidity</span>
+                            <span class="value" id="humidity">--%</span>
+                        </div>
+                        <div class="detail">
+                            <span class="label">Wind</span>
+                            <span class="value" id="wind-speed">-- km/h</span>
+                        </div>
+                        <div class="detail">
+                            <span class="label">Pressure</span>
+                            <span class="value" id="pressure">-- hPa</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="forecast-container">
+            <h3>5-Day Forecast</h3>
+            <div class="forecast" id="forecast">
+                <!-- Forecast items will be added here by JavaScript -->
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
